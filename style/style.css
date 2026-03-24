@@ -1,0 +1,68 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding:0;
+    background-color: black;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 4em;
+}
+.desc {
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 5vw;
+    color: rgb(255, 255, 255);
+    z-index: 100;
+}
+
+model-viewer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.controls {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: rgb(228, 179, 2);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
