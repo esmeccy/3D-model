@@ -4,25 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Saira:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <title>Model-viewer Demo</title>
 </head>
 <body>
     <div class="container">
+        <div class="header">
         <div class="content">
         <h1>Human Eyeball</h1>
-        <p class="desc">
-        Explore the 3D model and inspect key parts of the eye.
-        </p>
+        <p>Explore and inspect key parts of the eye.</p>
+        </div>
+       
+        <div class="button-group">
+            <button class="btn"id="pupil" onclick="setOrbit('0.024rad 1.56rad 80m')">Pupil</button>
+            <button class="btn" id="iris" onclick="setOrbit('0.18rad 1.4rad 75.85m')">Iris</button>
+            <button class="btn" id="cornea" onclick="setOrbit('-0.33rad 1.5rad 80m')">Cornea</button>
+            <button class="btn" id="sclera" onclick="setOrbit('1.06rad 1.55rad 80m')">Sclera</button>
+            <button class="btn" id="retina" onclick="setOrbit('3.95rad 1.55rad 80m')">Retina</button>
+        </div>
         </div>
         
         <model-viewer 
+        id="eyeball"
         src="../src/model/eyeball.glb" 
         alt="3D model of a human eyeball"
         camera-controls
         tone-mapping="neutral"
         shadow-intensity="0.28"
         exposure="1.49" 
-        camera-orbit="0deg 90deg 98.76m">
+        camera-orbit="10deg 95deg 75m">
 
         <!-- Pupil -->
         <button class="hotspot" 
@@ -82,5 +94,6 @@
     </div>
     <!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script> -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
