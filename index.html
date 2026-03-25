@@ -15,14 +15,19 @@
         <div class="content">
         <h1>Human Eyeball</h1>
         <p>Explore and inspect key parts of the eye.</p>
+        <div class="description" id="description">
+            <span class="desc-part-name" id="desc-part-name"></span>
+            <p class="desc-text" id="desc-text">Select a part to learn more.</p>
+            <a id="wiki-link" class="btn wiki-btn" href="#" target="_blank" rel="noopener noreferrer" style="display:none;">Learn more</a>
         </div>
-       
+        </div>
+
         <div class="button-group">
-            <button class="btn"id="pupil" onclick="setOrbit('0.024rad 1.56rad 80m')">Pupil</button>
-            <button class="btn" id="iris" onclick="setOrbit('0.18rad 1.4rad 75.85m')">Iris</button>
-            <button class="btn" id="cornea" onclick="setOrbit('-0.33rad 1.5rad 80m')">Cornea</button>
-            <button class="btn" id="sclera" onclick="setOrbit('1.06rad 1.55rad 80m')">Sclera</button>
-            <button class="btn" id="retina" onclick="setOrbit('3.95rad 1.55rad 80m')">Retina</button>
+            <button class="btn" id="pupil" data-part="pupil">Pupil</button>
+            <button class="btn" id="iris" data-part="iris">Iris</button>
+            <button class="btn" id="cornea" data-part="cornea">Cornea</button>
+            <button class="btn" id="sclera" data-part="sclera">Sclera</button>
+            <button class="btn" id="retina" data-part="retina">Retina</button>
         </div>
         </div>
         
@@ -37,55 +42,61 @@
         camera-orbit="10deg 95deg 75m">
 
         <!-- Pupil -->
-        <button class="hotspot" 
-        slot="hotspot-2" 
-        data-position="0.28421393618031365m 0.1078519773705395m 24.86470681174991m" 
-        data-normal="0.057067317362847106m 0.022275075838940124m 0.9981218073388526m" 
+        <button class="hotspot"
+        slot="hotspot-2"
+        data-part="pupil"
+        data-position="0.28421393618031365m 0.1078519773705395m 24.86470681174991m"
+        data-normal="0.057067317362847106m 0.022275075838940124m 0.9981218073388526m"
         data-visibility-attribute="visible">
             <div class="hotspotAnnotation">Pupil</div>
         </button>
 
         <!-- Iris -->
-        <button class="hotspot" 
-        slot="hotspot-3" 
-        data-position="-5.046566042747377m 4.717798796612546m 23.268837247345886m" 
-        data-normal="-0.34214409454516725m 0.28024388893064894m 0.8968839285464388m" 
+        <button class="hotspot"
+        slot="hotspot-3"
+        data-part="iris"
+        data-position="-5.046566042747377m 4.717798796612546m 23.268837247345886m"
+        data-normal="-0.34214409454516725m 0.28024388893064894m 0.8968839285464388m"
         data-visibility-attribute="visible">
             <div class="hotspotAnnotation">Iris</div>
         </button>
         
         <!-- Cornea -->
-        <button class="hotspot" 
-        slot="hotspot-4" 
-        data-position="-9.14209607248835m -3.4245071930843314m 21.441752014371744m" 
-        data-normal="-0.6082910447157034m -0.1838886793500881m 0.7721184873615956m" 
+        <button class="hotspot"
+        slot="hotspot-4"
+        data-part="cornea"
+        data-position="-9.14209607248835m -3.4245071930843314m 21.441752014371744m"
+        data-normal="-0.6082910447157034m -0.1838886793500881m 0.7721184873615956m"
         data-visibility-attribute="visible">
             <div class="hotspotAnnotation">Cornea</div>
         </button>
 
-         <!-- Sclera -->
-        <button class="hotspot" 
-        slot="hotspot-6" 
-        data-position="18.34797015535304m 0.047626093103537076m 14.164374260341184m" 
-        data-normal="0.7864729349044284m 0.0782194044074696m 0.612651652602811m" 
+        <!-- Sclera -->
+        <button class="hotspot"
+        slot="hotspot-6"
+        data-part="sclera"
+        data-position="18.34797015535304m 0.047626093103537076m 14.164374260341184m"
+        data-normal="0.7864729349044284m 0.0782194044074696m 0.612651652602811m"
         data-visibility-attribute="visible">
             <div class="hotspotAnnotation">Sclera</div>
         </button>
 
         <!-- Sclera -->
-        <button class="hotspot" 
-        slot="hotspot-7" 
-        data-position="-16.649876465921743m -2.319224485206642m 16.054226982651976m" 
-        data-normal="-0.7864727473289277m -0.07821892269685743m 0.6126519548985636m" 
+        <button class="hotspot"
+        slot="hotspot-7"
+        data-part="sclera"
+        data-position="-16.649876465921743m -2.319224485206642m 16.054226982651976m"
+        data-normal="-0.7864727473289277m -0.07821892269685743m 0.6126519548985636m"
         data-visibility-attribute="visible">
             <div class="hotspotAnnotation">Sclera</div>
         </button>
 
         <!-- Retina -->
-        <button class="hotspot" 
-        slot="hotspot-9" 
-        data-position="-8.659766043061367m -0.6219008204870247m -21.81839581941587m" 
-        data-normal="-0.30729193736150723m -0.017994964717589136m -0.9514451358209911m" 
+        <button class="hotspot"
+        slot="hotspot-9"
+        data-part="retina"
+        data-position="-8.659766043061367m -0.6219008204870247m -21.81839581941587m"
+        data-normal="-0.30729193736150723m -0.017994964717589136m -0.9514451358209911m"
         data-visibility-attribute="visible">
             <div class="hotspotAnnotation">Retina</div>
         </button>
