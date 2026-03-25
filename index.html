@@ -14,39 +14,73 @@
         Explore the 3D model and inspect key parts of the eye.
         </p>
         </div>
-
-        <model-viewer
-        src="./src/model/eyeball.glb"
-        alt="3D eyeball"
+        
+        <model-viewer 
+        src="../src/model/eyeball.glb" 
+        alt="3D model of a human eyeball"
         camera-controls
-        auto-rotate
-        camera-orbit="15deg 25deg 2m">
+        tone-mapping="neutral"
+        shadow-intensity="0.28"
+        exposure="1.49" 
+        camera-orbit="0deg 90deg 98.76m">
 
-        <button
-            class="hotspot"
-            slot="hotspot-1"
-            data-position="0m 0.05m 0.1m"
-            data-normal="0m 0m 1m">
-            Cornea
+        <!-- Pupil -->
+        <button class="hotspot" 
+        slot="hotspot-2" 
+        data-position="0.28421393618031365m 0.1078519773705395m 24.86470681174991m" 
+        data-normal="0.057067317362847106m 0.022275075838940124m 0.9981218073388526m" 
+        data-visibility-attribute="visible">
+            <div class="hotspotAnnotation">Pupil</div>
         </button>
 
-        <button
-            class="hotspot"
-            slot="hotspot-2"
-            data-position="0m 0m 0m"
-            data-normal="0m 1m 0m">
-            Iris
+        <!-- Iris -->
+        <button class="hotspot" 
+        slot="hotspot-3" 
+        data-position="-5.046566042747377m 4.717798796612546m 23.268837247345886m" 
+        data-normal="-0.34214409454516725m 0.28024388893064894m 0.8968839285464388m" 
+        data-visibility-attribute="visible">
+            <div class="hotspotAnnotation">Iris</div>
+        </button>
+        
+        <!-- Cornea -->
+        <button class="hotspot" 
+        slot="hotspot-4" 
+        data-position="-9.14209607248835m -3.4245071930843314m 21.441752014371744m" 
+        data-normal="-0.6082910447157034m -0.1838886793500881m 0.7721184873615956m" 
+        data-visibility-attribute="visible">
+            <div class="hotspotAnnotation">Cornea</div>
         </button>
 
-        <button
-            class="hotspot"
-            slot="hotspot-3"
-            data-position="0m -0.05m -0.08m"
-            data-normal="0m 0m -1m">
-            Retina
+         <!-- Sclera -->
+        <button class="hotspot" 
+        slot="hotspot-6" 
+        data-position="18.34797015535304m 0.047626093103537076m 14.164374260341184m" 
+        data-normal="0.7864729349044284m 0.0782194044074696m 0.612651652602811m" 
+        data-visibility-attribute="visible">
+            <div class="hotspotAnnotation">Sclera</div>
         </button>
-        </model-viewer>
+
+        <!-- Sclera -->
+        <button class="hotspot" 
+        slot="hotspot-7" 
+        data-position="-16.649876465921743m -2.319224485206642m 16.054226982651976m" 
+        data-normal="-0.7864727473289277m -0.07821892269685743m 0.6126519548985636m" 
+        data-visibility-attribute="visible">
+            <div class="hotspotAnnotation">Sclera</div>
+        </button>
+
+        <!-- Retina -->
+        <button class="hotspot" 
+        slot="hotspot-9" 
+        data-position="-8.659766043061367m -0.6219008204870247m -21.81839581941587m" 
+        data-normal="-0.30729193736150723m -0.017994964717589136m -0.9514451358209911m" 
+        data-visibility-attribute="visible">
+            <div class="hotspotAnnotation">Retina</div>
+        </button>
+    </model-viewer>
+
     </div>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    <!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script> -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
 </html>
